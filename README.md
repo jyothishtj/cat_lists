@@ -1,6 +1,6 @@
 
 
-# Medibank Coding Challenge: Cat List
+# Coding Challenge: Cat List
 
 ## Application Details
 
