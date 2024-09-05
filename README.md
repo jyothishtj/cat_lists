@@ -11,3 +11,4 @@ This application is used for fetching the details of the cats in alphabetical or
 ## How to run the application
 -Install the dependencies using npm i  
 -Run the application using npm start  
+-Run the unit tests using npm test
