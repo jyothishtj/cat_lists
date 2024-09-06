@@ -18,6 +18,7 @@ const CatList: React.FC = () => {
   const [cats, setCats] = useState<{ [key: string]: string[] }>({});
 
   useEffect(() => {
+    // Fetch data
     const fetchData = async () => {
       try {
         const response = await fetch('https://gist.githubusercontent.com/medibank-digital/a1fc81a93200a7b9d5f8b7eae0fac6f8/raw/de10a4fcf717e6c431e88c965072c784808fd6b2/people.json'); // Replace with your actual URL
@@ -25,6 +26,7 @@ const CatList: React.FC = () => {
 
         const categorizedCats: { [key: string]: string[] } = {};
 
+        // Filter based on pet type and add to corresponding gender
         data.forEach(person => {
           if (person.pets) {
             person.pets
@@ -37,7 +39,7 @@ const CatList: React.FC = () => {
               });
           }
         });
-
+// Sort the result
         for (const gender in categorizedCats) {
           categorizedCats[gender] = categorizedCats[gender].sort();
         }
